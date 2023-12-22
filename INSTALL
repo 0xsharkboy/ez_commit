@@ -3,5 +3,10 @@
 sudo cp ez_commit.py ./ezc
 sudo chmod +x ./ezc
 sudo mv ./ezc /usr/bin/
+if [ -f "/etc/arch-release" ]; then
+    pip install --break-system-packages -r requirements.txt
+else
+    pip install -r requirements.txt
+fi
 echo "Installation complete!"
 echo "Type 'ezc' to run the program."
