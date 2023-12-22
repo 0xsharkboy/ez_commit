@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+sudo cp ez_commit.py ./ezc
+sudo chmod +x ./ezc
+sudo mv ./ezc /usr/bin/
+echo "Installation complete!"
+echo "Type 'ezc' to run the program."
