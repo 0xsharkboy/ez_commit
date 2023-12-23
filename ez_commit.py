@@ -18,7 +18,7 @@ options = [ "clean         : Clean part of code",
             "test          : Add / Update part of test"]
 
 types = [   "🧽 CLEAN |",
-            "🚀 DEPLAY |",
+            "🚀 DEPLOY |",
             "📃 DOCUMENTATION |",
             "✨ FEATURE |",
             "🔧 FIX |",
