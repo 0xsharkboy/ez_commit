@@ -49,6 +49,8 @@ def main():
             os.system("git add .")
         if sys.argv[i] == ("-p" or "--push"):
             push = True
+        else:
+            push = False
     menu_entry_index = TerminalMenu(options, title="Commit type", menu_highlight_style=("fg_yellow",)).show()
     try:
         message = input("Enter your commit message: ")
