@@ -31,7 +31,19 @@ types = [   "🧽 CLEAN |",
             "🧁 STYLE |",
             "🧪 TEST |"]
 
+def help():
+    for i in range(1, len(sys.argv)):
+        if sys.argv[i] == ("-h" or "--help"):
+            print("Usage: ezc [options]")
+            print("Options:")
+            print("  -a, --all\tAdd all files to commit")
+            print("  -p, --push\tPush to remote repository")
+            print("  -h, --help\tShow this help message and exit")
+            exit(0)
+
+
 def main():
+    help()
     for i in range(1, len(sys.argv)):
         if sys.argv[i] == ("-a" or "--all"):
             os.system("git add .")
