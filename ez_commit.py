@@ -41,7 +41,6 @@ def help():
             print("  -h, --help\tShow this help message and exit")
             exit(0)
 
-
 def main():
     help()
     for i in range(1, len(sys.argv)):
@@ -59,5 +58,6 @@ def main():
     os.system(f"git commit -m \"{types[menu_entry_index]} {message}\"")
     if push:
         os.system("git push")
+
 if __name__ == "__main__":
     main()
