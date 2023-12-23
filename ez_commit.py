@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from simple_term_menu import TerminalMenu
-from os import system as cmd
+import os, sys
 
 options = [ "clean         : Clean part of code",
             "deploy        : Deploy a new project version",
@@ -32,12 +32,18 @@ types = [   "🧽 CLEAN |",
             "🧪 TEST |"]
 
 def main():
+    for i in range(1, len(sys.argv)):
+        if sys.argv[i] == ("-a" or "--all"):
+            os.system("git add .")
+        if sys.argv[i] == ("-p" or "--push"):
+            push = True
     menu_entry_index = TerminalMenu(options, title="Commit type", menu_highlight_style=("fg_yellow",)).show()
     try:
         message = input("Enter your commit message: ")
     except KeyboardInterrupt:
         exit(0)
-    cmd(f"git commit -m \"{types[menu_entry_index]} {message}\"")
-
+    os.system(f"git commit -m \"{types[menu_entry_index]} {message}\"")
+    if push:
+        os.system("git push")
 if __name__ == "__main__":
     main()
