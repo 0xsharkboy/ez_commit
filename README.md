@@ -7,3 +7,9 @@ cd ez_commit
 ./INSTALL
 ```
 Then run the program with ```ezc```
+
+## To-do list
+- [ ] Code clean up
+- [ ] Branch selection
+- [ ] Cherry pick
+- [ ] Auto update
